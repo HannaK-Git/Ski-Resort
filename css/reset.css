@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box; /* Include padding and border in the width and height of elements */
+}
+
+:root {
+  font-size: 62.5%; /* 62.5% of the default set in the browser */
+}
+
+ul {
+  list-style-type: none; /* No dots / circles before list items */
+}
+
+a {
+  text-decoration: none; /* No underline for links */
+}
+
+a:focus {
+  outline: none;
+}
+
+img {
+  display: block; /* Show each image on a separate line, by default */
+  max-width: 100%;
+  height: auto;
+}

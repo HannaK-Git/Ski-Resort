@@ -1,0 +1,351 @@
+/*#region General */
+
+body {
+  margin: 0;
+  font-family: "Tai Heritage Pro", serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #a4c2e2;
+
+  /* Color Variables */
+  --primary-color-blue: #0f5298;
+  --white-color: #fff;
+  --img-border-color: #fafafa;
+}
+
+/*#endregion General */
+
+/*#region Typography*/
+
+header {
+  position: absolute; /* Making the Hero background cover the header as well */
+  font-size: 1.1em;
+  margin-top: 1em;
+  left: 0;
+  right: 0; 
+  background-color: initial; /* Override general.css definition - show no background-color, only the background image of the Hero section */
+}
+
+.second-part ul {
+  /* Lifts list */
+  list-style: circle;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5em;
+}
+
+h1 span {
+  /* "Always a Skier" */
+  font-weight: 300;
+  display: block; /* Position the text under the main text of the h1 element ("Once a Skier") */
+  font-size: 0.9em;
+}
+
+.site-name {
+  /* "Frozen Planet" (at the bottom) */
+  color: var(--primary-color-blue);
+  font-weight: 700;
+  text-align: center;
+}
+
+main p::first-letter {
+  /* First letter of each paragraph in the main section */
+  font-size: 2em;
+  color: var(--primary-color-blue);
+  line-height: 0.5; /* To avoid too big space between the line and the next line */
+}
+
+p.site-name::first-letter {
+  font-size: 1em;
+  color: var(--primary-color-blue);
+}
+
+.special-text {
+  /* "See you on the mountain," */
+  clear: both; /* Clear float, for not being affected by previous floats */
+  text-align: center;
+  font-size: 2em;
+  color: var(--primary-color-blue);
+}
+
+p.special-text::first-letter {
+  font-size: 1em;
+}
+
+/*#endregion Typography*/
+
+/*#region Hero Section */
+.hero-section {
+  background-image: url("../images/mountain.jpg");
+  background-size: cover; /* Resize bg image to cover all of the element */
+  padding: 10em 0; /* Above h1 and below "Get Tickets" */
+  color: var(--white-color);
+}
+
+.container {
+  /* Container of h1 and "Get Tickets" link */
+  width: 80%; /* 80% of the hero section width */
+  margin: 0 auto; /* Center */
+}
+
+/* button style */
+.button {
+  /* "Get Tickets" link */
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--primary-color-blue);
+  padding: 0.5em 1.4em;
+  border-radius: 15px;
+  color: var(--primary-color-blue);
+  background-color: rgb(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+.button:hover {
+  background-color: rgb(255, 255, 255, 0.7);
+
+  border: 2px solid var(--primary-color-blue);
+}
+/*#endregion Hero Section */
+
+/*#region Navbar */
+
+nav a:hover {
+  border-bottom: solid var(--primary-color-blue) 2px;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--primary-color-blue);
+}
+
+/*#endregion Navbar */
+
+/*#region main */
+main {
+  width: 80%; /* 80% of body */
+  margin: 0 auto; /* Center */
+  text-align: left;
+  font-size: 1.2em;
+  position: relative; /* for positioning the first photo, which is absolute*/
+  background-color: #d3deeb;
+  padding: 5rem 10rem;
+}
+
+main h2 {
+  /* Unnecessary? */
+  text-align: center;
+  font-family: "Tai Heritage Pro", serif;
+  font-size: 2em;
+  color: var(--primary-color-blue);
+}
+
+.border {
+  border: var(--primary-color-blue) solid 2px;
+  padding: 7rem;
+  box-shadow: 1px 1px 10px -4px rgba(0, 0, 0, 0.87);
+}
+
+/*#endregion main */
+
+/*#region Images*/
+figure.text-area-img1 {
+  max-width: 45%; /* 45% of the width of first-part */
+  position: absolute;
+  top: -1em;
+  right: 0;
+  border: 5px solid var(--img-border-color);
+}
+
+figure.text-area-img2 {
+  max-width: 45%;
+  position: relative; /* 45% of the width of second-part */
+  top: 15%; /* Sets the top edge position in 15% of second-part */
+  float: left; /* Allows the second-part text to be next to the image */
+  border: 5px solid var(--img-border-color);
+  padding: 0;
+  margin-right: 4em;
+  margin-left: 0;
+}
+
+figure.text-area-img3 {
+  float: left; /* Allows the fourth-part text to be next to the image */
+  border: 5px solid var(--img-border-color);
+  padding: 0;
+  margin-left: 0;
+  margin-right: 1em;
+  margin-top: -0.4em;
+}
+
+img {
+  margin: 0 auto; /* Horizontally center images inside figures */
+}
+
+/*#endregion Images*/
+
+/*#region main parts*/
+
+/* First part */
+.first-part {
+  position: relative; /* This + figure.text-area-img1 being position: absolute, allows for a proper position for the first image */
+}
+
+.first-part p {
+  max-width: 45%; /* 45% of the width of first-part */
+}
+
+/* Second part */
+.second-part {
+  top: 1em;
+  position: relative;
+  max-width: 100%;
+}
+.second-part p,
+.second-part ul {
+  max-width: 30%;
+  display: inline-block;
+}
+
+.third-part {
+  content: ""; /* Unnecessary? */
+  display: block; /* Unnecessary? */
+  clear: both; /* Unnecessary? */
+  padding-top: 2rem;
+}
+/* Forth part */
+.fourth-part {
+  max-width: 100%;
+  padding-top: 2rem;
+}
+/*#endregion BlueBox*/
+
+/*#region Media Queries*/
+
+@media (max-width: 880px) {
+  /* Media queries for Hero Section */
+  .hero-section {
+    /* Small background image for a mobile screen */
+    background-image: url("../images/mountain-sm.jpg");
+  }
+
+  h1 {
+    /* Hide h1 on mobile */
+    visibility: hidden;
+  }
+
+  nav li {
+    /* Remove underline from links on mobile */
+    border-bottom: none;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    /* Add underline to hovered linked, on mobile */
+    color: var(--primary-color-blue);
+    border-bottom: solid var(--primary-color-blue) 2px;
+  }
+
+  nav li a {
+    font-size: 2rem;
+  }
+
+  .button {
+    margin-top: 4em;
+  }
+
+  /* media queries for main section*/
+
+  main {
+    width: 90%; /* Width = 90% of body */
+    text-align: left;
+    padding: 0;
+  }
+
+  main h2 {
+    /* Unnecessary? */
+    display: none;
+  }
+
+  .border {
+    border: var(--primary-color-blue) solid 1px;
+    padding: 0.5em;
+  }
+
+  /* media queries for images*/
+
+  figure.text-area-img2 {
+    width: 100%; /* 100% of second-part's width */
+    max-width: 100%;
+    border: 1px solid var(--img-border-color);
+    padding: 0;
+    margin-right: 0; /* Unnecessary? */
+    margin-left: 0; /* Unnecessary? */
+  }
+
+  figure.text-area-img3 {
+    width: 100%; /* 100% of fourth-part's width */
+    max-width: 100%;
+    border: 1px solid var(--img-border-color);
+    padding: 0;
+    margin-left: 0; /* Unnecessary? */
+    margin-right: 0; /* Unnecessary? */
+  }
+
+  figure.text-area-img3 img {
+    width: 100%; /* 100% of the width of the figure element */
+  }
+
+  /* media queries for main parts */
+
+  .first-part {
+    position: relative; /* Unnecessary? */
+  }
+
+  .first-part p {
+    max-width: 100%;
+  }
+
+  .second-part {
+    position: relative; /* Unnecessary? */
+    max-width: 100%;
+  }
+
+  .second-part p {
+    /* Hide on mobile ("We provide visitors with 8 lifts . . .") */
+    max-width: 100%; /* Unnecessary */
+    display: none;
+  }
+
+  .second-part ul {
+    /* Hide on mobile (lifts list) */
+    display: none;
+  }
+
+  .fourth-part {
+    max-width: 100%;
+  }
+
+  .hide-on-mobile {
+    /* A class for hiding content on mobile */
+    display: none;
+  }
+
+  /* media queries for Typography Section */
+
+  main p::first-letter {
+    margin-left: 1em;
+    font-size: 1.1em; /* Smaller font enlargement compared to desktop version */
+    color: var(--primary-color-blue);
+  }
+
+  .special-text {
+    font-size: 1.5em;
+  }
+}
+
+/*#endregion Media Queries*/

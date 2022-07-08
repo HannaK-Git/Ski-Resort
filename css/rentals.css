@@ -1,0 +1,129 @@
+/*#region General*/
+body {
+  background-image: linear-gradient(#71a5dc, white); /* Light blue => White */
+  background-repeat: no-repeat; /* To avoid repeating of the bg gradient */
+  background-position: right top;
+  background-attachment: fixed; /* fixed - bg does not scroll with the page */
+
+  /* Color Variables */
+  --primary-blue-color: #064d9a;
+
+  color: var(--primary-blue-color);
+}
+
+
+ 
+h1 {
+  color: white;
+  text-align: center;
+}
+
+/*#endregion General*/
+
+/*#region Section*/
+section {
+  display: inline-block;
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  text-align: center;
+}
+
+section {
+  padding: 5rem;
+  margin: 5rem;
+}
+
+section h2 {
+  color: #398be2;
+  font-size: 1.6rem;
+  border: #1c70cb solid 1px;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+/*#endregion Section*/
+
+/*#region article */
+article {
+  max-width: 80%; /* 80% of main's width */
+  margin: 0 auto; /* Centering the article inside main */
+  text-align: left;
+}
+
+article h2 {
+  text-align: center;
+}
+
+article p::first-letter {
+  margin-left: 0.5em; /* Push the first letter (and line) inside */
+  font-size: 2.5rem; /* A bigger font size for the first letter */
+  color: #0f5298;
+}
+
+p a {
+  color: #1a75d6;
+  text-decoration: none;
+}
+
+p a:hover,
+p a:focus {
+  text-decoration: none;
+  color: #44eded;
+}
+p a:active {
+  text-decoration: none;
+}
+
+/*#endregion article */
+
+/*#region Tables*/
+
+th.child-header {
+  /* Fourth column of the table - child prices */
+  padding-top: 1.5em;
+}
+
+th.child-header span {
+  /* Position "(12 and under)" below "Child" */
+  display: block;
+}
+
+table td,
+th {
+  border-bottom: #6fa6e0 solid 1px; /* Separating line between rows */
+  color: var(--primary-blue-color);
+  padding: 3.5rem;
+}
+
+table ul {
+  /* For lists inside the table, in column "What's Inside" */
+  margin: 0;
+  padding: 0;
+}
+
+/*#endregion Tables*/
+
+/*#region media queries*/
+@media (max-width: 880px) {
+  table td,
+  th {
+    padding: 0.4em;
+    font-size: 0.8em;
+  }
+
+  section {
+    display: block;
+    padding: 1em;
+    margin: 2em auto;
+    max-width: 90%; /* 90% of main's' width, on mobile */
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    border-radius: 25px;
+    padding: 0.5em;
+    margin: 1em;
+  }
+}
+/*#endregion media queries*/

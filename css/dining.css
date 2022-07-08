@@ -1,0 +1,167 @@
+/*#region General*/
+body {
+  background-image: linear-gradient(#71a5dc, white); /* Light blue => White */
+  background-repeat: no-repeat; /* To avoid repeating of the bg gradient */
+  background-position: right top;
+  background-attachment: fixed; /* fixed bg - does not scroll with the page */
+  text-align: left;
+  color: #064d9a;
+
+  /* Color Variables */
+  --img-border-color: #fafafa;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+header {
+  text-align: center;
+  z-index: 1; /* to be above other elements when scrolling the page */
+}
+
+h1 {
+  position: relative; /* Allows to position the element relative to its normal position, with some changes */
+  right: 1em;
+  font-size: 4rem;
+} 
+
+/*#endregion General*/
+
+/*#region main*/
+main {
+  max-width: 80%; /* 80% of body */
+  margin: 0 auto; /* Centering element */
+  padding: 2rem;
+  position: relative; /* For positioning child elements */
+}
+
+main > p {
+  /* All p elements that are (direct) children of main */
+  text-align: center;
+}
+
+p.summary {
+  max-width: 80%; /* 80% of main's width */
+  padding-top: 2em;
+  margin: 0 auto; /* Horizontally centering the paragraph inside main */
+}
+
+main p::first-letter {
+  margin-left: 0.5em;
+  font-size: 2.5rem;
+  color: var(--primary-color-blue);
+}
+
+/*#endregion main*/
+
+/*#region cards*/
+.first-part {
+  display: inline-block; /* Putting the two cards next to each other */
+  max-width: 45%; /* The first card (Lambada) takes 45% of main's width */
+  padding: 1.7em;
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  text-align: center;
+}
+
+.second-part {
+  margin-top: 0;
+  display: inline-block;
+
+  max-width: 45%; /* The second card (Lambada) takes 45% of main's width */
+  position: absolute;
+  margin-left: 2rem;
+  padding: 2em;
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  text-align: center;
+}
+
+.second-part p {
+  padding-bottom: 0.2em;
+}
+
+/*#endregion cards*/
+
+/*#region images*/
+.first-part figure {
+  margin: 0 auto; /* Horizontally centering the image inside the card */
+}
+figure.text-area-img1 {
+  max-width: 40%; /* The image takes up to 40% of the card's width */
+  border: 5px solid var(--img-border-color);
+}
+
+.second-part figure {
+  margin: 0 auto;
+}
+figure.text-area-img2 {
+  max-width: 45%;
+  border: 5px solid var(--img-border-color);
+  margin: 0 auto;
+}
+
+/*#endregion images*/
+
+/*#region media queries */
+
+@media (max-width: 880px) {
+  main {
+    max-width: 90%;
+  }
+
+  main p {
+    /* Take up to 100% of main, on mobile */
+    max-width: 100%;
+  }
+
+  p.summary {
+    /* Clear float, and take up to 100% of main, on mobile */
+   
+    max-width: 100%;
+  }
+
+  h1 {
+    right: 0;
+  }
+
+  .first-part {
+    /* Position first-part in its own line, so the two parts will be on top of each other on mobile, instead of next to each other */
+    display: block;
+    position: static;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .second-part {
+    /* Position second-part in its own line, so the two parts will be on top of each other on mobile, instead of next to each other */
+    display: block;
+    position: static;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  /* Images */
+
+  figure.text-area-img1 {
+    width: 100%; /* 100% of first-part */
+    max-width: 100%;
+    display: block;
+    position: static;
+    border: 1px solid var(--img-border-color);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  figure.text-area-img2 {
+    width: 100%; /* 100% of second-part */
+    max-width: 100%;
+    display: block;
+    position: static;
+    border: 1px solid var(--img-border-color);
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+/*#endregion media queries */

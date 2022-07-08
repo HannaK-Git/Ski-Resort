@@ -1,0 +1,122 @@
+/*#region General*/
+body {
+  
+
+  /* Color Variables */
+  --primary-blue-color: #064d9a;
+
+  color: var(--primary-blue-color);
+} 
+
+
+/*#endregion General*/
+
+/*#region Section*/
+section {
+  /* Image gallery */
+  display: inline-block;
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  text-align: center;
+  padding: 5rem;
+  margin: 5rem;
+}
+
+/*#endregion Section*/
+
+/*#region article*/
+article {
+  /* Take up to 80% of main's width, center the element and align text to the left. */
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+article h2 {
+  text-align: center;
+}
+
+article p::first-letter {
+  margin-left: 0.5em;
+  font-size: 2.5rem;
+  color: #0f5298;
+}
+
+p a {
+  color: #1a75d6;
+  text-decoration: none; /* Remove underline from link */
+}
+
+p a:hover, /* Design link hover status - color, no underline*/
+p a:focus {
+  text-decoration: none;
+  color: #44eded;
+}
+p a:active {
+  /* Design link active status (clicked) - no underline */
+  text-decoration: none;
+}
+
+/*#endregion article*/
+
+/*#region images*/
+.img-gallery figure {
+  display: inline-block; /* Placing the photos next to each other */
+  width: 20%; /* Each figure takes up to 20% of the section's width */
+  border: 1px solid var(--img-border-color);
+}
+
+.img-gallery figure:hover {
+  /* Place a border around a photo in hover state. */
+  border: 1px solid #0f57b6;
+}
+
+/*#endregion images*/
+
+/*#region Tables*/
+table td,
+th {
+  border-bottom: #6fa6e0 solid 1px; /* A line to separate it from the next row */
+  color: var(--primary-blue-color);
+  padding: 3.5rem;
+}
+
+table ul {
+  margin: 0;
+  padding: 0;
+}
+
+th.child-header {
+  /* Unnecessary? */
+  padding-top: 1.5em;
+}
+
+th.child-header span {
+  /* Unnecessary? */
+  display: block;
+}
+
+/*#endregion Tables*/
+
+/*#region media queries*/
+
+@media (max-width: 880px) {
+  table td, /* Smaller padding of table cells, on mobile */
+  th {
+    padding: 0.5rem;
+  }
+
+  .img-gallery figure {
+    display: block; /* Display photos one above the other */
+    width: 100%; /* Each figure takes all of the section's width */
+    margin: 2em auto; /* Vertical margin of 2em top, and 2em bottom. Horizontal centering */
+  }
+
+  section {
+    display: block;
+    padding: 1em;
+    margin: 1em;
+  }
+}
+/*#endregion media queries*/

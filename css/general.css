@@ -1,0 +1,271 @@
+/*#region General */
+
+body {
+  margin: 0;
+  font-family: "Tai Heritage Pro", serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #a4c2e2;
+
+  /* Color Variables */
+  --primary-color-blue: #0f5298;
+  --white-color: #fff;
+  --nav-links-light-blue-color: #bbe9f5;
+  --img-border-color: #fafafa;
+}
+
+h1 {
+  color: var(--white-color);
+  text-align: center;
+}
+/*#endregion General */
+
+/*#region Navbar */
+header {
+  position: sticky;
+  background-color: #1c70cb;
+  color: black;
+  top: 0; 
+  
+}
+
+nav ul {
+  /* Navigation margin and padding */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  /* Position elements next to each other, with margin of 1em between each two. */
+  display: inline-block;
+  margin: 1em;
+}
+
+nav a {
+  /* nav links font weight and color, and padding of each element */
+  font-weight: 700;
+  padding: 0.5em;
+  color: var(--white-color);
+}
+
+nav a:hover, /* Hovered nav element - underline, color */
+nav a:focus {
+  border-bottom: solid var(--nav-links-light-blue-color) 2px;
+  color: var(--nav-links-light-blue-color);
+}
+
+/*#endregion Navbar */
+
+/*#region Img */
+img {
+  /* Centering the image inside the parent element */
+  margin: 0 auto;
+}
+/*#endregion Img */
+
+/*#region Footer*/
+
+.footer {
+  /* Site footer - background color, width 100% of body, text-aligned to the left, font, and padding (top - bottom, right-left) */
+  background: var(--primary-color-blue);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  text-align: left;
+  font: bold 1.6rem sans-serif;
+  padding: 2rem 4rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  /* Place footer parts next to each other, each one aligned vertically to the tallest element on the line */
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-left {
+  /* Limit footer-left part width to 40% of the footer width */
+  width: 40%;
+}
+
+.footer-left i {
+  /* Font Awesome settings - border, color, font size, sizes, border-radius (for circular shape), text-align center, margin, and vertical align to the middle of the parent element (footer-left) */
+  border: var(--white-color) solid 1px;
+  color: var(--white-color);
+  font-size: 2rem;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2;
+  margin: 1rem 1.5rem;
+  vertical-align: middle;
+}
+
+.footer-left p {
+  display: inline-block; /* Position text next to icons on Contact Us */
+  color: var(--white-color);
+  font-weight: 400;
+  vertical-align: middle; /* Align each Contact Us paragraph to the middle of the parent element (footer-left) */
+  margin: 0;
+}
+
+.footer-left p span {
+  /* Settings for address (without city and country) - separate line, normal font-weight */
+  display: block;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.footer h2 {
+  /* "Contact Us" h2 design */
+  padding-bottom: 2rem;
+  color: var(--white-color);
+  font: 400 3.6rem "Open Sans";
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-center {
+  /* Limiting the width of footer-center ("Follow Us" and below) to 35% of the parent element (footer). */
+  width: 35%;
+}
+
+.footer-center p:nth-child(1) {
+  /* Design of "Follow us" */
+  color: var(--white-color);
+  font: normal 3.6rem "Open Sans";
+  font-size: 3rem;
+  margin: 0;
+}
+.footer-center p:nth-child(2) {
+  /* Design of "on our social networks" */
+  color: var(--white-color);
+  font: normal 3.6rem "Open Sans";
+  font-size: 2rem;
+  margin: 0;
+}
+
+.footer-icons {
+  margin-top: 3rem;
+}
+
+.footer-icons a {
+  /* Design of the icons in the "Follow Us" part */
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  cursor: pointer; /* Changing the cursor to a pointer shape */
+  border: var(--white-color) solid 1px;
+  border-radius: 3px; /* Making the corners of the icons a bit circular */
+  font-size: 2rem;
+  color: var(--white-color);
+  text-align: center;
+  line-height: 1.5;
+
+  margin-right: 0.3rem; /* Margin-right of each link (icon) */
+  margin-bottom: 0.5rem;
+}
+.footer-icons a:hover {
+  /* Hovered link (icon) in the "Follow Us" part */
+  color: #6ba5e4;
+  border: #6ba5e4 solid 1px;
+}
+
+/* Footer Right */
+
+.footer-right {
+  /* Limiting the width of the footer-right part to 20% of the width of the parent element (footer). */
+  width: 20%;
+}
+
+.footer-right p {
+  /* Design of the copyright */
+  display: inline-block; /* Unnecessary? */
+  font: normal 3.6rem "Open Sans";
+  padding-left: 7rem;
+  padding-top: 19rem;
+
+  font-size: 2rem;
+  color: var(--white-color);
+}
+
+/*#endregion Footer*/
+
+/*#region media queries*/
+
+@media (max-width: 880px) {
+
+body table, body p{
+    font-size: 1.5rem;
+  }
+
+  header {
+    position: static; /* The header is not sticky in mobile mode, to save space on screen */
+  }
+
+  nav li {
+    /* Position nav elements one on top of the other, with a margin and border bottom to separate them*/
+    display: block;
+    margin: 1em;
+    border-bottom: 1px dotted lightblue;
+  }
+
+  nav li:first-child {
+    /* Padding-top for Home link on nav */
+    padding-top: 1em;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    /* Removing the underline from Desktop version of hovered links */
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* media queries for Footer Section*/
+
+  .footer {
+    font: bold 1.4rem sans-serif;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    /* Positioning footer parts on top of each other */
+    display: block;
+    width: 100%;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  .footer-right p {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .footer-center i {
+    margin-left: 0;
+  }
+
+  /* Align Contact Us icons so they would start at the same horizontal line */
+
+  footer div:nth-child(1) {
+    margin-right: 0.5em;
+  }
+
+  footer div:nth-child(2) {
+    margin-right: 3em;
+  }
+
+  footer div:nth-child(3) {
+    margin-left: 1em;
+  }
+}
+
+/*#endregion media queries*/

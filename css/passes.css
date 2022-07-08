@@ -1,0 +1,80 @@
+/*#region General*/
+body {
+  background-image: linear-gradient(#71a5dc, white); /* Light blue => White */
+  background-repeat: no-repeat; /* To avoid repeating of the bg gradient */
+  background-position: right top;
+  background-attachment: fixed; /* fixed bg - does not scroll with the page */
+
+  /* Color Variables */
+  --primary-bg-color: #1c70cb;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+/*#endregion General*/
+
+/*#region Sections*/
+section {
+  display: inline-block; /* For positioning the sections (tables) next to each other, instead of one on top of the other */
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  text-align: center;
+  padding: 5rem;
+  margin: 5rem;
+}
+
+section h2 {
+  color: #398be2;
+  font-size: 1.6rem;
+  border: var(--primary-bg-color) solid 1px;
+  border-radius: 25px;
+  padding: 1rem;
+}
+
+/*#endregion Sections*/
+
+/*#region Tables*/
+table{
+  margin: 0 auto;
+}
+
+table td {
+  border-bottom: #6fa6e0 solid 1px; /* Separating line between rows */
+  color: #064d9a;
+  padding: 1.5rem;
+}
+
+.third-table {
+  display: inline-block;
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  padding-bottom: 16.5rem;
+}
+
+.third-table table {
+  margin: auto; /* Center the table horizontally */
+}
+
+/*#endregion Tables*/
+
+/*#region Media Queries*/
+
+@media (max-width: 880px) {
+  .third-table table {
+    padding: 0 2em;
+  }
+
+  section {
+    display: block; /* Show sections on top of each other, on mobile */
+    padding: 1em;
+    margin: 1em;
+  }
+}
+/*#endregion Media Queries*/
