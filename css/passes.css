@@ -1,6 +1,6 @@
 /*#region General*/
 body {
-  background-image: linear-gradient(#71a5dc, white); /* Light blue => White */
+  background-image: linear-gradient(#71a5dc, white);
   background-repeat: no-repeat; /* To avoid repeating of the bg gradient */
   background-position: right top;
   background-attachment: fixed; /* fixed bg - does not scroll with the page */
@@ -20,10 +20,10 @@ h1 {
 
 /*#region Sections*/
 section {
-  display: inline-block; /* For positioning the sections (tables) next to each other, instead of one on top of the other */
+  display: inline-block; 
   border: grey solid 1px;
   border-radius: 25px;
-  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); 
   text-align: center;
   padding: 5rem;
   margin: 5rem;
@@ -54,7 +54,7 @@ table td {
   display: inline-block;
   border: grey solid 1px;
   border-radius: 25px;
-  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); 
   padding-bottom: 16.5rem;
 }
 

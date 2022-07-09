@@ -186,7 +186,7 @@ img {
 
 .footer-right p {
   /* Design of the copyright */
-  display: inline-block; /* Unnecessary? */
+  display: inline-block; 
   font: normal 3.6rem "Open Sans";
   padding-left: 7rem;
   padding-top: 19rem;
@@ -206,7 +206,7 @@ body table, body p{
   }
 
   header {
-    position: static; /* The header is not sticky in mobile mode, to save space on screen */
+    position: static; 
   }
 
   nav li {

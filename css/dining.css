@@ -59,7 +59,7 @@ main p::first-letter {
   padding: 1.7em;
   border: grey solid 1px;
   border-radius: 25px;
-  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); 
   text-align: center;
 }
 
@@ -73,7 +73,7 @@ main p::first-letter {
   padding: 2em;
   border: grey solid 1px;
   border-radius: 25px;
-  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  box-shadow: 0px 2px 15px 0px var(--box-shadow-color); 
   text-align: center;
 }
 

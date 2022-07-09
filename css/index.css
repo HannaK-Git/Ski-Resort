@@ -40,7 +40,7 @@ h1 {
 h1 span {
   /* "Always a Skier" */
   font-weight: 300;
-  display: block; /* Position the text under the main text of the h1 element ("Once a Skier") */
+  display: block; 
   font-size: 0.9em;
 }
 
@@ -87,8 +87,8 @@ p.special-text::first-letter {
 
 .container {
   /* Container of h1 and "Get Tickets" link */
-  width: 80%; /* 80% of the hero section width */
-  margin: 0 auto; /* Center */
+  width: 80%; 
+  margin: 0 auto; 
 }
 
 /* button style */
@@ -128,8 +128,8 @@ nav a:focus {
 
 /*#region main */
 main {
-  width: 80%; /* 80% of body */
-  margin: 0 auto; /* Center */
+  width: 80%; 
+  margin: 0 auto; 
   text-align: left;
   font-size: 1.2em;
   position: relative; /* for positioning the first photo, which is absolute*/
@@ -138,7 +138,7 @@ main {
 }
 
 main h2 {
-  /* Unnecessary? */
+
   text-align: center;
   font-family: "Tai Heritage Pro", serif;
   font-size: 2em;
@@ -155,7 +155,7 @@ main h2 {
 
 /*#region Images*/
 figure.text-area-img1 {
-  max-width: 45%; /* 45% of the width of first-part */
+  max-width: 45%; 
   position: absolute;
   top: -1em;
   right: 0;
@@ -164,9 +164,9 @@ figure.text-area-img1 {
 
 figure.text-area-img2 {
   max-width: 45%;
-  position: relative; /* 45% of the width of second-part */
-  top: 15%; /* Sets the top edge position in 15% of second-part */
-  float: left; /* Allows the second-part text to be next to the image */
+  position: relative; 
+  top: 15%; 
+  float: left; 
   border: 5px solid var(--img-border-color);
   padding: 0;
   margin-right: 4em;
@@ -174,7 +174,7 @@ figure.text-area-img2 {
 }
 
 figure.text-area-img3 {
-  float: left; /* Allows the fourth-part text to be next to the image */
+  float: left; 
   border: 5px solid var(--img-border-color);
   padding: 0;
   margin-left: 0;
@@ -183,7 +183,7 @@ figure.text-area-img3 {
 }
 
 img {
-  margin: 0 auto; /* Horizontally center images inside figures */
+  margin: 0 auto; 
 }
 
 /*#endregion Images*/
@@ -212,9 +212,9 @@ img {
 }
 
 .third-part {
-  content: ""; /* Unnecessary? */
-  display: block; /* Unnecessary? */
-  clear: both; /* Unnecessary? */
+  content: ""; 
+  display: block; 
+  clear: both; 
   padding-top: 2rem;
 }
 /* Forth part */
@@ -261,13 +261,13 @@ img {
   /* media queries for main section*/
 
   main {
-    width: 90%; /* Width = 90% of body */
+    width: 90%; 
     text-align: left;
     padding: 0;
   }
 
   main h2 {
-    /* Unnecessary? */
+ 
     display: none;
   }
 
@@ -279,21 +279,21 @@ img {
   /* media queries for images*/
 
   figure.text-area-img2 {
-    width: 100%; /* 100% of second-part's width */
+    width: 100%; 
     max-width: 100%;
     border: 1px solid var(--img-border-color);
     padding: 0;
-    margin-right: 0; /* Unnecessary? */
-    margin-left: 0; /* Unnecessary? */
+    margin-right: 0; 
+    margin-left: 0; 
   }
 
   figure.text-area-img3 {
-    width: 100%; /* 100% of fourth-part's width */
+    width: 100%; 
     max-width: 100%;
     border: 1px solid var(--img-border-color);
     padding: 0;
-    margin-left: 0; /* Unnecessary? */
-    margin-right: 0; /* Unnecessary? */
+    margin-left: 0;
+    margin-right: 0; 
   }
 
   figure.text-area-img3 img {
@@ -303,7 +303,7 @@ img {
   /* media queries for main parts */
 
   .first-part {
-    position: relative; /* Unnecessary? */
+    position: relative; 
   }
 
   .first-part p {
@@ -311,13 +311,13 @@ img {
   }
 
   .second-part {
-    position: relative; /* Unnecessary? */
+    position: relative; 
     max-width: 100%;
   }
 
   .second-part p {
     /* Hide on mobile ("We provide visitors with 8 lifts . . .") */
-    max-width: 100%; /* Unnecessary */
+    max-width: 100%; 
     display: none;
   }
 
@@ -339,7 +339,7 @@ img {
 
   main p::first-letter {
     margin-left: 1em;
-    font-size: 1.1em; /* Smaller font enlargement compared to desktop version */
+    font-size: 1.1em; 
     color: var(--primary-color-blue);
   }
 

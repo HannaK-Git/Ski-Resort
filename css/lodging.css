@@ -17,7 +17,7 @@ section {
   display: inline-block;
   border: grey solid 1px;
   border-radius: 25px;
-  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); /* (horizontal offset, vertical offset, blur radius, spread radius) */
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); 
   text-align: center;
   padding: 5rem;
   margin: 5rem;
@@ -27,7 +27,7 @@ section {
 
 /*#region article*/
 article {
-  /* Take up to 80% of main's width, center the element and align text to the left. */
+  
   max-width: 80%;
   margin: 0 auto;
   text-align: left;
@@ -62,8 +62,8 @@ p a:active {
 
 /*#region images*/
 .img-gallery figure {
-  display: inline-block; /* Placing the photos next to each other */
-  width: 20%; /* Each figure takes up to 20% of the section's width */
+  display: inline-block; 
+  width: 20%; 
   border: 1px solid var(--img-border-color);
 }
 
@@ -88,12 +88,12 @@ table ul {
 }
 
 th.child-header {
-  /* Unnecessary? */
+
   padding-top: 1.5em;
 }
 
 th.child-header span {
-  /* Unnecessary? */
+  
   display: block;
 }
 

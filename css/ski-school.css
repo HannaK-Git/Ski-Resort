@@ -1,6 +1,6 @@
 /*#region general*/
 body {
-  color: #ffffffe0; /* Text color */
+  color: #ffffffe0; 
 }
 
 
@@ -10,8 +10,8 @@ body {
 
 /* General style for table  */
 table {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* (horizontal offset, vertical offset, blur radius) */
-  max-width: 80%; /* 80% of main's width */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+  max-width: 80%; 
   margin: 0 auto; /* Centering the table horizontally inside main */
   border-radius: 20px;
 }
@@ -34,8 +34,8 @@ thead :nth-child(3) {
 }
 
 th {
-  background-color: #486de8; /* BG color for table header row */
-  color: white; /* Text color for table header row */
+  background-color: #486de8; 
+  color: white;
   padding: 2rem;
   text-align: left;
 }
@@ -49,7 +49,7 @@ tr:nth-child(even) {
 
 tr :nth-child(1) {
   /* The first column of each row */
-  width: 40%; /* 40% of the width of the row */
+  width: 40%; 
 }
 
 /*Style for td*/
@@ -61,8 +61,8 @@ td {
 
 /*#region Section*/
 section {
-  margin: 0 auto; /* Horizontally center section inside main */
-  max-width: 80%; /* 80% of main's width */
+  margin: 0 auto; 
+  max-width: 80%; 
 
   margin-bottom: 4rem;
   margin-top: 3rem;
@@ -76,9 +76,9 @@ section p {
   text-align: left;
   font-size: 2rem;
   font-family: "Tai Heritage Pro", serif;
-  max-width: 45%; /* 45% of the section's width */
-  display: inline-block; /* To position the paragraph next to the image */
-  vertical-align: top; /* To vertically align the text with the top of the image */
+  max-width: 45%; 
+  display: inline-block; 
+  vertical-align: top; 
   text-align: left;
 }
 
@@ -87,15 +87,15 @@ span {
 }
 
 section figure {
-  display: inline-block; /* To position the image next to the text */
-  max-width: 28%; /* 28% of the section's width */
+  display: inline-block; 
+  max-width: 28%; 
 }
 
 /*#endregion Section Style*/
 
 /*#region addition to Foooter style*/
 footer {
-  margin-top: 5rem; /* Margin between the table and the footer */
+  margin-top: 5rem; 
 }
 /*#endregion addition to Foooter style*/
 
@@ -104,11 +104,11 @@ footer {
 @media (max-width: 880px) {
   
   section p {
-    max-width: 80%; /* 80% of the secion's width, on mobile */
+    max-width: 80%; 
   }
 
   section figure {
-    display: none; /* Hide the image on mobile, to save space */
+    display: none; 
   }
 }
 /*#endregion Media queries*/

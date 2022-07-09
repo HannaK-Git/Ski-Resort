@@ -21,7 +21,7 @@ a:focus {
 }
 
 img {
-  display: block; /* Show each image on a separate line, by default */
+  display: block;
   max-width: 100%;
   height: auto;
 }
